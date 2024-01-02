@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,52 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+* {
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "EncodeSans-Medium";
+  src: url("fonts/EncodeSans/EncodeSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "EncodeSans-Regular";
+  src: url("fonts/EncodeSans/EncodeSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "EncodeSans-SemiBold";
+  src: url("fonts/EncodeSans/EncodeSans-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "EncodeSans-Bold";
+  src: url("fonts/EncodeSans/EncodeSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "EncodeSans-ExtraBold";
+  src: url("fonts/EncodeSans/EncodeSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "EncodeSans-Thin";
+  src: url("fonts/EncodeSans/EncodeSans-Thin.ttf");
+}
+@font-face {
+  font-family: "EncodeSans-Light";
+  src: url("fonts/EncodeSans/EncodeSans-Light.ttf");
 }

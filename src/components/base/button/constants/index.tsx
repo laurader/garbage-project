@@ -1,15 +1,14 @@
-import { Colors } from '../../../../colors';
-import { SvgImage, SvgType } from '../../svg/svg';
-import React from 'react';
+import { Colors } from "../../../../colors";
+import { SvgImage, SvgType } from "../../svg/svg";
 
 export enum ButtonVariant {
-  Primary = 'Primary',
-  Facebook = 'Facebook',
-  Google = 'Google',
-  Disabled = 'Disabled',
-  Warning = 'Warning',
-  Outlined = 'Outlined',
-  Dark = 'Dark',
+  Primary = "Primary",
+  Facebook = "Facebook",
+  Google = "Google",
+  Disabled = "Disabled",
+  Warning = "Warning",
+  Outlined = "Outlined",
+  Dark = "Dark",
 }
 export const ButtonBgColors = {
   [ButtonVariant.Primary]: Colors.Primary,
@@ -41,23 +40,23 @@ export const ButtonCircularLoading = {
 };
 
 export const ButtonBorderStyle = {
-  [ButtonVariant.Primary]: 'none',
-  [ButtonVariant.Facebook]: 'none',
-  [ButtonVariant.Google]: 'solid',
-  [ButtonVariant.Disabled]: 'none',
-  [ButtonVariant.Warning]: 'none',
-  [ButtonVariant.Outlined]: 'solid',
-  [ButtonVariant.Dark]: 'none',
+  [ButtonVariant.Primary]: "none",
+  [ButtonVariant.Facebook]: "none",
+  [ButtonVariant.Google]: "solid",
+  [ButtonVariant.Disabled]: "none",
+  [ButtonVariant.Warning]: "none",
+  [ButtonVariant.Outlined]: "solid",
+  [ButtonVariant.Dark]: "none",
 };
 
 export const ButtonBorderWidth = {
-  [ButtonVariant.Primary]: '0px',
-  [ButtonVariant.Facebook]: '0px',
-  [ButtonVariant.Google]: '1px',
-  [ButtonVariant.Disabled]: '0px',
-  [ButtonVariant.Warning]: '0px',
-  [ButtonVariant.Outlined]: '2px',
-  [ButtonVariant.Dark]: '0px',
+  [ButtonVariant.Primary]: "0px",
+  [ButtonVariant.Facebook]: "0px",
+  [ButtonVariant.Google]: "1px",
+  [ButtonVariant.Disabled]: "0px",
+  [ButtonVariant.Warning]: "0px",
+  [ButtonVariant.Outlined]: "2px",
+  [ButtonVariant.Dark]: "0px",
 };
 export const ButtonBorderColor = {
   [ButtonVariant.Primary]: Colors.Transparent,
@@ -78,11 +77,11 @@ export const ButtonSvg = {
   [ButtonVariant.Dark]: null,
 };
 export const ButtonTextMargin = {
-  [ButtonVariant.Primary]: '0px',
-  [ButtonVariant.Facebook]: '12px',
-  [ButtonVariant.Google]: '12px',
-  [ButtonVariant.Disabled]: '0px',
-  [ButtonVariant.Warning]: '0px',
-  [ButtonVariant.Outlined]: '0px',
-  [ButtonVariant.Dark]: '0px',
+  [ButtonVariant.Primary]: "0px",
+  [ButtonVariant.Facebook]: "12px",
+  [ButtonVariant.Google]: "12px",
+  [ButtonVariant.Disabled]: "0px",
+  [ButtonVariant.Warning]: "0px",
+  [ButtonVariant.Outlined]: "0px",
+  [ButtonVariant.Dark]: "0px",
 };

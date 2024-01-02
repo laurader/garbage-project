@@ -3,12 +3,9 @@ import RegistrationForm from "../../components/registration-form/registration-fo
 import Form from "../../components/shared/form/form";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/app.store";
-import { useEffect, useState } from "react";
-import {
-  RegistrationFormType,
-  registrationFormActions,
-} from "../../store/registration-form/registration-form.store";
-import axios, { AxiosResponse } from "axios";
+import { registrationFormActions } from "../../store/registration-form/registration-form.store";
+import { RegistrationFormPageStyled } from "./registration-form.page.styled";
+import i18n from "../../translations/strings";
 
 const schema = yup.object({
   nome: yup.string().required(""), //inserire messaggio di errore
@@ -30,6 +27,8 @@ const schema = yup.object({
 export default function RegistrationFormPage() {
   // const [formData, setFormData] = useState<RegistrationFormType | null>(null);
   const dispatch = useDispatch();
+
+  //Acquisisco dallo state, dalla slice registrationForm il valore di isFormSuccess
   const { isFormSuccess } = useSelector(
     (state: RootState) => state.registrationForm
   );
@@ -77,11 +76,17 @@ export default function RegistrationFormPage() {
   //todo : dati che arrivano dagli input deel form e vanno dispacciati a saga attraverso un'azione con redux
 
   return (
-    <div>
-      <Form schema={schema}>
-        <RegistrationForm onSubmit={onSubmit} />
-      </Form>
-      <p>{isFormSuccess && "Registrazione completata con successo"}</p>
-    </div>
+    <RegistrationFormPageStyled.Container container>
+      <RegistrationFormPageStyled.ContainerForm>
+        <RegistrationFormPageStyled.TextSocial>
+          {i18n.t("registration.signUp")}
+        </RegistrationFormPageStyled.TextSocial>
+        <Form schema={schema}>
+          <RegistrationForm onSubmit={onSubmit} />
+        </Form>
+        {/* <p>{isFormSuccess && "Registrazione completata con successo"}</p> */}
+        <p>{isFormSuccess && i18n.t("registration.registrationConfirmed")}</p>
+      </RegistrationFormPageStyled.ContainerForm>
+    </RegistrationFormPageStyled.Container>
   );
 }

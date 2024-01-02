@@ -1,9 +1,3 @@
-//nome, cognome, residenza, mail, telefono, ecc...),
-// (ragione sociale, sede legale e operativa, p. IVA, ruolo all'interno dell'azienda
-// e il tipo di utente che desidera impersonare
-// (produttore del rifiuto, detentore del rifiuto o trasportatore, intermediario).
-// (un utente può impersonare un solo tipo)
-
 import { PayloadAction, createAction, createSlice } from "@reduxjs/toolkit";
 
 export type RegistrationFormType = {

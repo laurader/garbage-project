@@ -1,12 +1,25 @@
 import "./App.css";
 import { Provider } from "react-redux";
 import { store } from "./store/app.store";
-import RegistrationFormPage from "./pages/registration-formpage/registration-form.page";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./router/Router";
+
+// function App() {
+//   return (
+//     <Provider store={store}>
+//       <RegistrationFormPage />
+//     </Provider>
+//   );
+// }
+
+// export default App;
 
 function App() {
   return (
     <Provider store={store}>
-      <RegistrationFormPage />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </Provider>
   );
 }
