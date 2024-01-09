@@ -1,11 +1,17 @@
 import { Controller, useFormContext } from "react-hook-form";
 import { EditText } from "../edit-text/edit-text";
-import { Button } from "@mui/material";
+import Button from "../base/button/button";
 import { RegistrationFormStyled } from "./registration-form.styled";
 import i18n from "../../translations/strings";
+import { ButtonVariant } from "../base/button/constants";
 
 export default function RegistrationForm(props: any) {
-  const { handleSubmit, control } = useFormContext();
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useFormContext();
+  console.log(errors);
   return (
     <RegistrationFormStyled.Container>
       <Controller
@@ -17,6 +23,7 @@ export default function RegistrationForm(props: any) {
               onChange={onChange}
               placeholder={i18n.t("registration.firstName") + "*"}
               label={i18n.t("registration.firstName") + "*"}
+              error={errors?.nome?.message?.toString()}
             />
           );
         }}
@@ -210,11 +217,14 @@ export default function RegistrationForm(props: any) {
           );
         }}
       />
+      <RegistrationFormStyled.Separator />
       <RegistrationFormStyled.ContainerButton>
         <Button
+          variant={ButtonVariant.Primary}
           onClick={handleSubmit(props.onSubmit, (e) => {
             console.log(e);
           })}
+          label={i18n.t("registration.signUp")}
         />
       </RegistrationFormStyled.ContainerButton>
     </RegistrationFormStyled.Container>

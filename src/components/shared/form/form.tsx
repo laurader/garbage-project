@@ -11,7 +11,7 @@ export interface FormProps {
 }
 const Form = (props: FormProps) => {
   const methods = useForm({
-    // resolver: yupResolver(props.schema),
+    resolver: yupResolver(props.schema),
     // defaultValues: props.defaultValues,
   });
 

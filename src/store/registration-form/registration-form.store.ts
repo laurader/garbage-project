@@ -26,7 +26,7 @@ export type RegistrationFormType = {
   isFormSuccess: boolean;
 };
 
-const initialState: RegistrationFormType = {
+const initialState: any = {
   form: {
     id: 0,
     nome: "",
@@ -54,6 +54,13 @@ const registrationFormSlice = createSlice({
     updateForm: (state, { payload }: PayloadAction<RegistrationFormType>) => {
       //alla proprietà payload del parametro action arriverà un oggetto di tipo RegistrationFormType
       state = payload;
+    },
+    savedFormData: (
+      state,
+      { payload }: PayloadAction<RegistrationFormType>
+    ) => {
+      //alla proprietà payload del parametro action arriverà un oggetto di tipo RegistrationFormType
+      state.form = payload;
     },
     updateName: (state, action) => {
       state.form.name = action.payload;

@@ -8,7 +8,7 @@ import { RegistrationFormPageStyled } from "./registration-form.page.styled";
 import i18n from "../../translations/strings";
 
 const schema = yup.object({
-  nome: yup.string().required(""), //inserire messaggio di errore
+  nome: yup.string().required("Campo Obbligatorio"), //inserire messaggio di errore
   cognome: yup.string().required(""),
   residenza: yup.string().required(""),
   indirizzoEmail: yup.string().required().email(),
@@ -68,12 +68,11 @@ export default function RegistrationFormPage() {
 
   const onSubmit = (data: any) => {
     console.log("onSubmit");
+    //dati che arrivano dagli input del form e vanno dispacciati a saga attraverso un'azione con redux
     dispatch(registrationFormActions.registrationFormRequested(data));
     // console.log("data = ", data);
     // setFormData(data as RegistrationFormType);
   };
-
-  //todo : dati che arrivano dagli input deel form e vanno dispacciati a saga attraverso un'azione con redux
 
   return (
     <RegistrationFormPageStyled.Container container>

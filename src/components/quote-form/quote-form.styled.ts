@@ -1,9 +1,13 @@
 import styled from "@emotion/styled";
 
-export const RegistrationFormStyled = {
+export const QuoteFormStyled = {
   Container: styled.div<any>``,
   Separator: styled.div<any>`
     margin-top: 15px;
+  `,
+  ContainerofContainer: styled.div<any>`
+    display: flex;
+    justify-content: space-evenly;
   `,
   ContainerButton: styled.div<any>`
     // border: 3px solid lightblue;

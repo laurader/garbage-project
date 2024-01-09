@@ -4,10 +4,11 @@ import { registrationFormReducer } from "./registration-form/registration-form.s
 import { loginFormReducer } from "./login-form/login-form.store";
 import { all } from "redux-saga/effects";
 import { registrationSaga } from "../sagas/shared/registration-form.saga";
-
+import user from "./utente/utente.store";
 const rootReducer = {
   registrationForm: registrationFormReducer,
   loginForm: loginFormReducer,
+  user: user,
 };
 
 function* rootSaga() {

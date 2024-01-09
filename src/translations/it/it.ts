@@ -3,7 +3,7 @@ const it = {
     login: {
       username: "Username",
       password: "Password",
-      confirmPassword: "ConfirmPassword",
+      confirmPassword: "Conferma Password",
       loginIntoYourAccount: "Accedi alla tua area riservata",
       login: "Accedi",
       signUp: "Registrati",
